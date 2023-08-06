@@ -1,0 +1,34 @@
+body {
+	background-image: url('../images/clouds.jpg');
+	color: #333333;
+	font-family: 'Proxima Nova Soft', 'Helvetica Neue', sans-serif;
+}
+h1 {
+	text-align: center;
+}
+input[type='radio'] {
+	transform: scale(2);
+}
+input[type='radio'] + label {
+	padding-left: 10px;
+	line-height: 46px;
+	font-size: 30px;
+}
+#desiredTemp {
+	height: 46px;
+	width: 100%;
+	line-height: 50px;
+    font: inherit;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    padding-right: 35px;
+    padding-left: 15px;
+    height: 50px;
+}
+#submitButton {
+	width: 80px;
+	height: 40px;
+}

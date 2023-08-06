@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type='text/css' href="styles/style.css">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+		<script type='text/javascript' src='js/main.js'></script>
+		<script src="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.css"/>
+		<!-- <script type='text/javascript' src='https://drive.google.com/uc?export=view&id=1VW0RQSfpx0JffEEq4MPj-1TnAbXnQ1Aa'></script> -->
+		<title>FreshAir</title>
+	</head>
+	<body>
+		<h1>freshair</h1>
+		<p id='demo'></p>
+		<p>Want to turn off your air conditioning and let in some fresh air? Enter your location and your thermostat's set temperature (the indoor temperature you want) and FreshAir will estimate what the best time will be to open your windows based on your local weather forecast.</p>
+		<p>Enter a major city or a ZIP code in the U.S.:</p>
+		<form action='javascript:gettingJSON();'>
+			<input type='text' id='location' value=''>
+			<p>Enter your desired indoor temperature (in °F):</p>
+			<p><input type='text' id='desiredTemp' value=''></p>
+			<div class='radioboxes'>
+				<p>Are you trying to heat up your home or cool it down?</p>
+				<input type='radio' required='required' id='heat' name='direction' class='radio' checked><label for='heat'>Heat it up</label><br>
+				<input type='radio' required='required' id='cool' name='direction' class='radio'><label for='cool'>Cool it down</label><br><br>
+			</div>
+			<p>
+			<button id='submitButton'>Submit</button>
+			</p>
+		</form>
+	</body>
+	<script type="text/javascript">
+	placeSearch({
+	    key: 'AqRJi7yyeGgubgwcCzHCy1eaj54bLA17',
+	    collection: 'adminArea',
+	    container: document.querySelector('#location')
+	});</script>
+</html>
